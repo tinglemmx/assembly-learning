@@ -18,7 +18,7 @@ mov si,0
 mov cx,21
 mov ax,table
 mov es,ax
-s:add [bx].2 si
+s:add [bx].2,si
 mov ax,[bx].5[si]
 mov dx,[bx].7[si]
 div word ptr [bx].0aH[si]
