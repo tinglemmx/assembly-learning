@@ -14,10 +14,12 @@ start:  mov dh,8
 
         mov ax,4c00h
         int 21h
-; dh表示行
-; dl表示列
-; cl表示颜色    
-    
+
+; 说明：根据输入的行列和颜色 来显示字符串，字符串后面跟个0表示字符串结束
+; 参数：dh表示行
+; 参数：dl表示列
+; 参数：cl表示颜色    
+; 结果：根据输入的行列和颜色 来显示字符串
 show_str:   push dx
             push cx
             mov ax,0b800h
