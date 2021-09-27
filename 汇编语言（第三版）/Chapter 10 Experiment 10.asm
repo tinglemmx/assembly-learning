@@ -14,6 +14,10 @@ start:  mov dh,8
 
         mov ax,4c00h
         int 21h
+; dh表示行
+; dl表示列
+; cl表示颜色    
+    
 show_str:   push dx
             push cx
             mov ax,0b800h
