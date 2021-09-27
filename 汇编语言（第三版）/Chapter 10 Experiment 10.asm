@@ -20,6 +20,7 @@ start:  mov dh,8
 ; 参数：dl表示列
 ; 参数：cl表示颜色    
 ; 结果：根据输入的行列和颜色 来显示字符串
+
 show_str:   push dx
             push cx
             mov ax,0b800h
