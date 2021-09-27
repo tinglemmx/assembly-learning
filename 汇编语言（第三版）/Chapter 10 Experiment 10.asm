@@ -17,6 +17,7 @@ start:  mov dh,8
 ; dh表示行
 ; dl表示列
 ; cl表示颜色    
+；lalalala
     
 show_str:   push dx
             push cx
