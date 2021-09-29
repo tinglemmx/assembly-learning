@@ -8,20 +8,20 @@ start:  mov dh,8
         mov dl,3
         mov cl,2
         mov ax,data
-        mov ds,ax
-        mov si,0
         call show_str
-
         mov ax,4c00h
         int 21h
 
-; 说明：根据输入的行列和颜色 来显示字符串，字符串后面跟个0表示字符串结束
+; show_str说明：根据输入的行列和颜色 来显示字符串，字符串后面跟个0表示字符串结束
 ; 参数：dh表示行
 ; 参数：dl表示列
 ; 参数：cl表示颜色    
+; 参数：ax表示要显示的内容的起始地址    
 ; 结果：根据输入的行列和颜色 来显示字符串
 
-show_str:   push dx
+show_str:   mov ds,ax
+            mov si,0
+            push dx
             push cx
             mov ax,0b800h
             mov es,ax
