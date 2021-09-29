@@ -8,6 +8,7 @@ start:  mov dh,8
         mov dl,3
         mov cl,2
         mov ax,data
+        mov ds,ax
         call show_str
         mov ax,4c00h
         int 21h
@@ -19,8 +20,7 @@ start:  mov dh,8
 ; 参数：ax表示要显示的内容的起始地址    
 ; 结果：根据输入的行列和颜色 来显示字符串
 
-show_str:   mov ds,ax
-            mov si,0
+show_str:   mov si,0
             push dx
             push cx
             mov ax,0b800h
