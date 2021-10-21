@@ -14,7 +14,7 @@ data ends
 ;列3 人数 4byte： 169到252
 ;列4 人均利润 4byte：253到336 写最后
 data1 segment
-    db 21,4,1,1,2,24
+    db 21,4,1,1,5,24
 data1 ends
 ;0=总共行 
 ;1=总共列
