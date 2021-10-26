@@ -19,18 +19,19 @@ start:  mov ax,cs
         mov ax,4c00h
         int 21h
     do0:jmp short do0start
-        db "overflow!"           ;overflow！就放在jmp后面
+        db "divide error!"           ;overflow！就放在jmp后面
 do0start:mov ax,cs
         mov ds,ax
-        mov si,202h             ;设置ds:si 指向字符串,因为jmp short do0start 这条指令是两个字节 后面就是overflow！
+        mov si,202h             ;设置ds:si 指向字符串,因为jmp short do0start 这条指令是两个字节 后面就是divide error!
 
         mov ax,0b800h
         mov es,ax
         mov di,12*160+36*2    ;设置es:di 指向显存空间中间位置
 
-        mov cx,9          ;设置cx为字符串长度
+        mov cx,13          ;设置cx为字符串长度
     s:  mov al,[si]
         mov es:[di],al
+        mov es:[di].1,2h
         inc si
         add di,2
         loop s
