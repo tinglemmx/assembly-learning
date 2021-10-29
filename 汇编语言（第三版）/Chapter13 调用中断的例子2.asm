@@ -1,8 +1,8 @@
 ;功能：通过中断7ch将 小写字母变大写字母
 assume cs:code
-data segmenet
+date segment
     db 'conversation',0
-data ends
+date ends
 
 code segment
 start:  mov ax,date
