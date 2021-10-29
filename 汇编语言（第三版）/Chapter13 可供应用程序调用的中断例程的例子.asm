@@ -10,7 +10,7 @@ start:  mov ax,3456
         adc dx,dx   ;高位求和并计算进位  和上面一条语句用来达到*2的目的
         mov ax,4c00h
         int 21h
-code end
+code ends
 end start
 
 
