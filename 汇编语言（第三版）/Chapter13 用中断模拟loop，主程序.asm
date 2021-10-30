@@ -7,7 +7,7 @@ code segment
 start:  mov ax,0b800h
         mov es,ax
         mov di,160*12
-        mov bx,offset s-offset se
+        mov bx,offset s-offset se      ; 偏移量=(s-se)     还原就是  se+偏移量 = se+（s-se）=s
         mov cx,80
 s:      mov byte ptr es:[di],'!'
         mov byte ptr es:[di+1],2
