@@ -22,7 +22,7 @@ start:  mov ax,cs
 jump:   push bp
         push bx
         mov bp,sp
-        add [bp+2],bx
+        add [bp+4],bx   ;我这边push 了 两个 sp 移动了2次  每次2 字节  所以要+4
         pop bx
         pop bp
         iret
