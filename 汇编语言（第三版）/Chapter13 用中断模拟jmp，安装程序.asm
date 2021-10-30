@@ -21,6 +21,7 @@ start:  mov ax,cs
         int 21h
 jump:   push bp
         push bx
+        mov bp,sp
         add [bp+2],bx
         pop bx
         pop bp
