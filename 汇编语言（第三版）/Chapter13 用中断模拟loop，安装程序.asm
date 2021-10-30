@@ -4,11 +4,11 @@ assume cs:code
 code segment
 start:  mov ax,cs
         mov ds,ax
-        mov si,offset capital ;设置ds:si指向原地址
+        mov si,offset lp ;设置ds:si指向原地址
         mov ax,0
         mov es,ax
         mov di,200h
-        mov cx,offset capitalend-offset capital
+        mov cx,offset lpret-offset lp
         cld   ;DF置为0  si 和 di 递增方向
         rep movsb
 
