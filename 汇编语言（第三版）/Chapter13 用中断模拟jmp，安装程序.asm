@@ -1,5 +1,5 @@
 ;功能：上一个例子7ch中断的安装程序，
-;实现loop的功能
+;实现jmp的功能
 assume cs:code
 code segment
 start:  mov ax,cs
