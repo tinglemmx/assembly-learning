@@ -34,6 +34,7 @@ sqr:    mov bh,0        ;第0页
         mov bh,0  ;   第0页
         inc si
         jcxz ok
+        mov cx,1
         int 10h
         jmp s
     ok: iret
