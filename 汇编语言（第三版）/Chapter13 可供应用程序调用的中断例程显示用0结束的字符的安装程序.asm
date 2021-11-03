@@ -36,7 +36,11 @@ sqr:    mov bh,0        ;第0页
         jcxz ok
         mov cx,1
         int 10h
-        jmp s
+        inc dl
+        cmp dl,50h
+        jna s1
+        inc dh
+    s1: jmp s
     ok: iret
 sqrend: nop
 
