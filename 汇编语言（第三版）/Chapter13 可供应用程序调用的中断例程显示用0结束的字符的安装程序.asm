@@ -23,11 +23,13 @@ start:  mov ax,cs
         mov ax,4c00h
         int 21h
 sqr:    mov bh,0        ;第0页
-        mov ah,2        ;置光标
-        int 10h         ;置光标
+
         mov bl,cl       ;吧颜色转给bl
 
-      s:mov ah,9     ;在光标位置显示字符
+      s:mov ah,2        ;置光标
+        int 10h         ;置光标
+
+        mov ah,9     ;在光标位置显示字符
         mov al,[si]   ;字符
         mov cl,[si]
         mov ch,0
