@@ -1,3 +1,5 @@
+;要生成exe 在屏幕干净的时候运行 才有效果
+
 assume cs:code
 code segment
 s1: db 'Good,better,best,','$'
